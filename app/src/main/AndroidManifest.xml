@@ -9,6 +9,7 @@
         android:theme="@style/AppTheme" >
         <activity
             android:name=".activity.DiaryListActivity"
+            android:theme="@style/AppTheme"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -17,13 +18,17 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".DiaryEntryActivity"
+            android:name=".activity.DiaryEntryActivity"
             android:label="@string/title_activity_diary_entry" >
         </activity>
         <activity
             android:name=".activity.DiaryAddActivity"
             android:label="@string/title_activity_diary_add" >
         </activity>
+
+        <provider android:name=".persistence.DiaryContentProvider"
+            android:authorities="com.carnewal.diary.persistence.DiaryContentProvider">
+        </provider>
     </application>
 
 </manifest>
